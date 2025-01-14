@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Córdoba ciudad Patrimonio">
+    <meta name="keywords" content="Turismo, patrimonio, viajes">
+    <title>Córdoba Ciudad Patrimonio</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .sidebar {
+            background-color: #333;
+            color: white;
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            width: 60px;
+            overflow: hidden;
+            transition: width 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        #menu-toggle:checked ~ .sidebar {
+            width: 250px;
+        }
+        .sidebar img {
+            width: 40px;
+            height: 40px;
+            margin: 10px;
+            cursor: pointer;
+        }
+        .menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: none;
+        }
+        #menu-toggle:checked ~ .sidebar .menu {
+            display: block;
+        }
+        .menu li {
+            padding: 10px;
+            border-bottom: 1px solid #444;
+        }
+        .menu li a {
+            color: white;
+            text-decoration: none;
+            display: block;
+        }
+        .menu li a:hover {
+            background-color: #555;
+        }
+        main {
+            margin-left: 60px;
+            padding: 20px;
+            transition: margin-left 0.3s ease;
+        }
+        #menu-toggle:checked ~ .sidebar + main {
+            margin-left: 250px;
+        }
+    </style>
+</head>
+<body>
+    <input type="checkbox" id="menu-toggle" style="display: none;">
+    <div class="sidebar">
+        <label for="menu-toggle">
+            <img src="menu-icon.png" alt="Menú">
+        </label>
+        <ul class="menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="mezquita.html">Mezquita</a></li>
+            <li><a href="CascoHistorico.html">Casco Histórico</a></li>
+            <li><a href="LosPatios.html">Los Patios</a></li>
+            <li><a href="MedinaAzahara.html">Medina Azahara</a></li>
+            <li><a href="Contacto.html">Contacto</a></li>
+            <li>
+                <details>
+                    <address>Córdoba, España</address>
+                    <small>
+                        <a id="copy" href="https://dudas.derechosdigitales.org/caso/que-significa-el-simbolo-copyright-es-obligatorio-su-uso/">
+                            &copy; Todos los derechos...
+                        </a>
+                    </small>
+                </details>
+            </li>
+        </ul>
+    </div>
+    <main>
+        <a href="patiocoldoba.jpg">foto</a>
+        <header>
+            <h1>Casco CascoHistorico</h1>
+        </header>
+        <section>
+            <article>
+                <h2>Contenido de la noticia 1</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+            </article>
+            <article>
+                <h2>Contenido de la noticia 2</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+            </article>
+            <article>
+                <h2>Contenido de la noticia 3</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+            </article>
+        </section>
+    </main>
+</body>
+</html>
